@@ -21,5 +21,13 @@ local plugins = {
       vim.g.rustfmt_autosave = 1
     end
   },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "wgsl"
+      }
+    }
+  }
 }
 return plugins

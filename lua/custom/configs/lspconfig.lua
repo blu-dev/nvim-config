@@ -12,6 +12,9 @@ lspconfig.rust_analyzer.setup({
     ['rust-analyzer'] = {
       cargo = {
         allFeatures = true,
+        extraEnv = {
+          ["LUA_DOCGEN_DIR"] = "/Users/blujay/dev/sentinels/lua_docs"
+        }
       },
     },
   },
