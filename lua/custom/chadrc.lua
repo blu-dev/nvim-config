@@ -1,7 +1,7 @@
 ---@type ChadrcConfig
 local M = {}
 
-M.ui = { theme = 'catppuccin', transparency = true }
+M.ui = { theme = 'github_dark' }
 M.plugins = 'custom.plugin'
 M.mappings = require "custom.mappings"
 

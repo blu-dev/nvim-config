@@ -128,9 +128,9 @@ M.lspconfig = {
   -- See `<cmd> :help vim.lsp.*` for documentation on any of the below functions
 
   n = {
-    ["gD"] = {
+    ["<leader>gD"] = {
       function()
-        vim.lsp.buf.declaration()
+        vim.cmd.RustLsp('externalDocs')
       end,
       "LSP declaration",
     },
