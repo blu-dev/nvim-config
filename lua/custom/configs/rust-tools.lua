@@ -17,7 +17,17 @@ local options = {
           autoReload = true,
           features = "all",
           extraEnv = {
-            LUA_DOCGEN_DIR = "/Users/blujay/dev/sentinels/lua_docs/"
+            LUADOC_SKIP = "1"
+          }
+        },
+        check = {
+          extraEnv = {
+            LUADOC_SKIP = "1"
+          }
+        },
+        server = {
+          extraEnv = {
+            LUADOC_SKIP = "1"
           }
         },
         rustfmt = {

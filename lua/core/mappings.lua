@@ -128,16 +128,21 @@ M.lspconfig = {
   -- See `<cmd> :help vim.lsp.*` for documentation on any of the below functions
 
   n = {
-    ["<leader>gD"] = {
+    ["gD"] = {
       function()
-        vim.cmd.RustLsp('externalDocs')
+        vim.lsp.buf.declaration()
       end,
       "LSP declaration",
     },
 
     ["gd"] = {
       function()
-        vim.lsp.buf.definition()
+        vim.lsp.buf.definition({
+          on_list = function(options)
+            vim.fn.setqflist({}, ' ', options)
+            vim.api.nvim_command('cfirst')
+          end
+        })
       end,
       "LSP definition",
     },
